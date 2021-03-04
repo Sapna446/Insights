@@ -103,6 +103,7 @@ public class WorkflowTest extends WorkflowTestData {
 
 	}
 
+	//status validation after execution
 	@Test(priority = 1)
 	public void testValidateStatusUpdate() {
 		try {
