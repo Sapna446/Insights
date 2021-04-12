@@ -51,7 +51,9 @@ public class AssessmentReportsTest extends AssessmentReportsTestData {
 	@BeforeClass
 	public void onInit() throws Exception {
 
-		reportTypeId=saveWorkflowType("Report");
+		//save workflow type
+		reportTypeId = saveWorkflowType("Report");
+		
 		// save multiple Kpi definition in db
 		readKpiFileAndSave("KPIDefination.json");
 

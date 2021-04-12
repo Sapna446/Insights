@@ -71,6 +71,7 @@ public class AssessmentReportsTestData {
 	ReportConfigDAL reportConfigDAL = new ReportConfigDAL();
 	WorkflowDAL workflowDAL = new WorkflowDAL();
 	
+	//prepare test data
 	int reportIdProdRT = 300600;
 	int reportIdSonarRT = 300601;
 	int reportIdkpiRT = 300602;
