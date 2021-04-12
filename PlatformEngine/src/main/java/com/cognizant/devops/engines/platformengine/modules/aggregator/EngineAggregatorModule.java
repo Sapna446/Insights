@@ -174,7 +174,7 @@ public class EngineAggregatorModule extends TimerTask implements ApplicationConf
 			JsonArray arrayToolRegistred = toolResponse.getJson().get("results").getAsJsonArray().get(0)
 					.getAsJsonObject().get("data").getAsJsonArray().get(0).getAsJsonObject().get("row").getAsJsonArray()
 					.get(0).getAsJsonArray();
-
+			log.debug("arrayToolRegistred {} ",  arrayToolRegistred);
 			// arrayToolRegistred
 			for (JsonElement registedTool : arrayToolRegistred) {
 				String toolName = registedTool.toString().replaceAll("\"", "");
