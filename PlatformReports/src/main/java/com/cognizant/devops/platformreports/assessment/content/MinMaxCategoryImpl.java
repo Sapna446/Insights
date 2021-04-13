@@ -88,7 +88,7 @@ public class MinMaxCategoryImpl extends BaseContentCategoryImpl {
 	 * @return
 	 */
 	private InsightsContentDetail minInferenceResult(List<InsightsKPIResultDetails> inferenceResults) {
-
+		//get min content result from kpi result
 		InsightsContentDetail inferenceContentResult = null;
 		Map<String, Object> resultValuesMap = new HashMap<>();
 		String comparisonField = getResultFieldFromContentDefination();
@@ -97,6 +97,7 @@ public class MinMaxCategoryImpl extends BaseContentCategoryImpl {
 
 			InsightsKPIResultDetails minResultObject = Collections.min(inferenceResults,
 					Comparator.comparing(e -> (double) e.getResults().get(comparisonField)));
+			//double minValue = (double) minResultObject.getResults().get(comparisonField);
 			//double minValue = (double) minResultObject.getResults().get(comparisonField);
 			String dateOfMinValue = InsightsUtils.insightsTimeXFormat(minResultObject.getRecordDate());
 			String inferenceText = "";

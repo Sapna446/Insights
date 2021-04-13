@@ -70,6 +70,7 @@ public class DataArchivalAggregatorModule extends TimerTask implements Applicati
 
 	}
 
+	//register data queue
 	private void registerDataAggregator(String dataRoutingKey) {
 
 		if (dataRoutingKey != null && !registry.containsKey(dataRoutingKey)) {
@@ -88,6 +89,7 @@ public class DataArchivalAggregatorModule extends TimerTask implements Applicati
 		}
 	}
 
+	//register health queue
 	private void registerHealthAggregator(String healthRoutingKey) {
 
 		if (healthRoutingKey != null && !registry.containsKey(healthRoutingKey)) {
