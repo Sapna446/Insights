@@ -73,6 +73,7 @@ public class EmailProcesser implements Callable<JsonObject> {
 		return returnMessage;
 	}
 
+	//set Email Info And Send Email
 	public boolean setEmailInfoAndSendEmail(MailReport mail) throws InsightsCustomException {
 		Properties props = System.getProperties();
 		boolean isMailSent = false;
@@ -127,6 +128,7 @@ public class EmailProcesser implements Callable<JsonObject> {
 				log.debug("Workflow Detail ==== Attaching file from {} ", mail.getReportFilePath());
 				messageBodyPart.setDataHandler(new DataHandler(bds));
 				messageBodyPart.setFileName(mail.getEmailAttachmentName() + ".pdf");
+				log.debug("messageBodyPart {} ", messageBodyPart);
 				multipart.addBodyPart(messageBodyPart);
 			}
 
