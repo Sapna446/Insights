@@ -97,6 +97,7 @@ public abstract class BaseContentCategoryImpl {
 	public void saveContentResult(InsightsContentDetail contentResult) {
 		try {
 			String json = oMapper.writeValueAsString(contentResult);
+			log.debug("json {}",json);
 			JsonObject contentDataJson = jsonParser.parse(json).getAsJsonObject();
 			if (!contentResult.getResultValuesMap().isEmpty() && contentDataJson != null) {
 				JsonObject resultValueJson = jsonParser
