@@ -74,6 +74,7 @@ public class DataArchivalAggregatorModule extends TimerTask implements Applicati
 
 		if (dataRoutingKey != null && !registry.containsKey(dataRoutingKey)) {
 			try {
+				log.debug("dataRoutingKey", dataRoutingKey);
 				registry.put(dataRoutingKey, new DataArchivalDataSubscriber(dataRoutingKey));
 				EngineStatusLogger.getInstance().createDataArchivalStatusNode(
 						" Data archival data queue " + dataRoutingKey + " subscribed successfully ",
