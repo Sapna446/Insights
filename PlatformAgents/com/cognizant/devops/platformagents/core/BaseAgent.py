@@ -86,6 +86,7 @@ class BaseAgent(object):
             return self.config.get(key, None)
 
     def loadVaultCredentials(self):
+	#testing 
         agentId=self.config.get("agentId", '')
         readTokenValue=self.config.get("vault").get("readToken", '')
         secretEngine=self.config.get("vault").get("secretEngine", '')
